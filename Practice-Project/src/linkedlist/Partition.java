@@ -1,6 +1,7 @@
 package linkedlist;
 
 import hackerrank.LinkedListNode;
+import workaround.LinkedListUtils;
 
 public class Partition {
 
@@ -9,11 +10,11 @@ public class Partition {
 		LinkedListNode head = new LinkedListNode(3, new LinkedListNode(5, new LinkedListNode(8, new LinkedListNode(5, new LinkedListNode(10, new LinkedListNode(2, new LinkedListNode(1,null)))))));
 		int value = 5;
 		LinkedListNode tmp = head;
-		tmp = printNodes(tmp);
+		tmp = LinkedListUtils.printNodes(tmp);
 		
 		//tmp = Partition.partition(head,value);
 		tmp = Partition.partitionEfficient(head,value);
-		tmp = printNodes(tmp);
+		tmp = LinkedListUtils.printNodes(tmp);
 	
 	}
 

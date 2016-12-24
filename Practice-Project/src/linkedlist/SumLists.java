@@ -1,6 +1,7 @@
 package linkedlist;
 
 import hackerrank.LinkedListNode;
+import workaround.LinkedListUtils;
 
 public class SumLists {
 
@@ -10,8 +11,8 @@ public class SumLists {
 		LinkedListNode num2 = new LinkedListNode(9, new LinkedListNode(2, null));
 		
 		
-		printNodes(num1);
-		printNodes(num2);
+		LinkedListUtils.printNodes(num1);
+		LinkedListUtils.printNodes(num2);
 		
 		LinkedListNode output = new LinkedListNode();
 		LinkedListNode outputRunner = output;
@@ -55,18 +56,8 @@ public class SumLists {
 			
 		}
 		
-		printNodes(output);
+		LinkedListUtils.printNodes(output);
 		
 	}
-	
-	private static LinkedListNode printNodes( LinkedListNode tmp) {
-		while(tmp!=null){
-			System.out.print(tmp.data);
-			if(tmp.next != null) System.out.print("-->");
-			tmp = tmp.next;
-		}
-		System.out.println();
-		return tmp;
-	}	
 	
 }
