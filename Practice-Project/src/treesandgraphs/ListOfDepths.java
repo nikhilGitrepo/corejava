@@ -1,12 +1,8 @@
 package treesandgraphs;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
-
-import hackerrank.LinkedListNode;
 
 public class ListOfDepths {
 
@@ -14,13 +10,20 @@ public class ListOfDepths {
 	
 	public static void main(String[] args) {
 
-		TreeNode root = createTree();
 		ListOfDepths ld = new ListOfDepths();
-
-		ld.processTree(root,0);
+		int a[] = {1,2,3,4,5,6,7};
+		
+		ld.treeToDepthsMap(a);
 		
 		System.out.println("Done");
 		System.out.println(listsofdepths);
+			
+	}
+	
+	public Map<Integer,LinkedList<TreeNode>> treeToDepthsMap(int[] a) {
+		TreeNode root = createTree(a);
+		processTree(root,0);
+		return listsofdepths;
 	}
 
 	private void processTree(TreeNode root, int level) {
@@ -46,8 +49,7 @@ public class ListOfDepths {
 		
 	}
 
-	private static TreeNode createTree() {
-		int a[] = {1,2,3,4,5,6,7,8};
+	private TreeNode createTree(int[] a ) {
 		
 		TreeNode tn = new TreeNode();
 				

@@ -8,11 +8,44 @@ public class MinimalTree {
 		
 		TreeNode tn = new TreeNode();
 				
+		/*
+		 * Done using PRE-ORDER TRAVERSAL
+		 */
 		tn = createTree(a,tn);
 		System.out.println(tn);
 		
 	}
 
+	/**
+	 * PRE-ORDER TRAVERSAL
+	 * 
+	 * @param subarray
+	 * @param tn
+	 * @return
+	 */
+	public static TreeNode createBSTTree(int[] subarray, TreeNode tn) {
+		
+		int rootIndex = subarray.length/2;
+		if( (rootIndex+1 < subarray.length) && (subarray[rootIndex] == subarray[rootIndex+1])){
+			rootIndex = rootIndex+1;
+		}
+		tn.data = subarray[rootIndex];
+		
+		if(subarray.length == 1){
+			tn.left = null;
+			tn.right = null;
+		}else{
+			int[] leftArray = createSubArray(subarray,0,rootIndex-1);
+			tn.left = createTree(leftArray, new TreeNode());
+
+			if( rootIndex+1 <= subarray.length-1){
+				int[] righttArray = createSubArray(subarray,rootIndex+1,subarray.length-1);
+				tn.right = createTree(righttArray, new TreeNode());
+			}
+		}
+		return tn;
+	}
+	
 	public static TreeNode createTree(int[] subarray, TreeNode tn) {
 		
 		int rootIndex = subarray.length/2;
@@ -32,7 +65,7 @@ public class MinimalTree {
 			}
 		}
 		return tn;
-	}
+	}	
 	
 	private static int[] createSubArray(int [] orig, int start, int end ) 
 	{
