@@ -45,6 +45,7 @@ class LockThread extends Thread {
 				
 				try {
 					Thread.sleep(500);
+					Thread.currentThread().wait(5000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
