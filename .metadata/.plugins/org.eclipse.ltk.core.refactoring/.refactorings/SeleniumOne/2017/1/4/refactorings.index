@@ -1,0 +1,4 @@
+1485279730041	Delete element
+1485373191115	Extract method 'initializeFireFox'
+1485373258922	Extract method 'initiateDesiredCapabilites'
+1485373388290	Extract method 'setSystemProps'

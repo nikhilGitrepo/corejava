@@ -1,0 +1,20 @@
+package accessmodifier;
+
+class PrivateClass2 {
+
+	private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	private void setName(String name) {
+		this.name = name;
+	}
+	
+}
+
+public class PrivateClass {
+	
+}
+

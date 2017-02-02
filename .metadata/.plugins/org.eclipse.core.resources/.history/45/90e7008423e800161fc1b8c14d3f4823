@@ -1,0 +1,20 @@
+package string;
+
+public class StringTest {
+
+	public static void main(String[] args) {
+/*		String str1= "Nikhil";
+//		String str2 = new String(str1);
+		String str2 = str1;
+		
+		System.out.println(str1 + " " + str2);
+		str2 = "Kirti";
+		System.out.println(str1 + " " + str2);*/
+		
+		StringPojo pojo1  = new StringPojo("Nikhil");
+		StringPojo pojo2  = pojo1;
+		
+		
+	}
+	
+}
