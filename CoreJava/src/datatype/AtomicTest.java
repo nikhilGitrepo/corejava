@@ -12,7 +12,9 @@ public class AtomicTest {
 		System.out.println(atInt.intValue());
 		
 		Random r = new Random();
-		System.out.println(r.longs());
+		while(r.nextLong() != 0 ) {
+			System.out.println(r.nextLong());
+		}
 		
 	}
 	

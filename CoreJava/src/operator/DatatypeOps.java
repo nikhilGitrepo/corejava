@@ -1,0 +1,9 @@
+package operator;
+
+public class DatatypeOps {
+	public static void main(String[] args) {
+		int a = 2;
+		int b = 2;
+		System.out.println(a | b); // prints out 2
+	}
+}
