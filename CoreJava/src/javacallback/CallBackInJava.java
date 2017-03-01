@@ -1,4 +1,7 @@
+package javacallback;
+
 public class CallBackInJava {
+	
     public static void main(String[] args) throws  Exception {
         new CallBackInJava().doWork(new Callback() { // implementing class            
             @Override

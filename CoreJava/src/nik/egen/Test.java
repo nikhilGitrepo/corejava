@@ -3,7 +3,7 @@ package nik.egen;
 public class Test {
 
 	public static void main(String[] args) {
-		
+
 		try {
 			Float f1= new Float("3.0");
 			int i1 = f1.intValue();
@@ -19,6 +19,9 @@ public class Test {
 		}
 
 		System.out.println(Math.floor(-4.1));
+		
+		int i = Integer.MAX_VALUE;
+		System.out.println(i);
 		
 	}
 

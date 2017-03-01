@@ -26,16 +26,21 @@ public class BinaryTree {
 
 	    public Node createTree()
 	    {
-	        Node n1 = new Node(2);
-	        Node n2 = new Node(3);
-	        Node n3 = new Node(4);
-	        Node n4 = new Node(5);
+	        Node n2 = new Node(2);
+	        Node n3 = new Node(3);
+	        Node n4 = new Node(4);
+	        Node n5 = new Node(5);
+	        
+	        Node n6 = new Node(6);
+	        Node n7 = new Node(7);
 
 	        BinaryTree tree = new BinaryTree(1); //  1
-	        tree.add(root, n1, "left"); //          / \
-	        tree.add(root, n2, "right"); //        2   3
-	        tree.add(n1, n3, "left"); //          / \
-	        tree.add(n1, n4, "right"); //        4   5
+	        tree.add(root, n2, "left"); //          / \
+	        tree.add(root, n3, "right"); //        2   3
+	        tree.add(n2, n4, "left"); //          / \   \
+	        tree.add(n2, n5, "right"); //        4   5   6
+//	        tree.add(n3, n6, "right"); //				  \
+//	        tree.add(n6, n7, "right"); //				   7
 	        
 	        return root;
 	    }
